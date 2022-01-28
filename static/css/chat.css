@@ -1,16 +1,26 @@
-.chat-bar-collapsible{
+.chat-bar-collapsible {
     position: fixed;
-    
     bottom: 0;
-    right: 50px;
- 
-    box-shadow: 0 8px 16px 0 rgb(141, 36, 36);
+    right: 30px;
+    box-shadow: 0 8px 0px 0 #FBC519;
 }
+h5{
+    display: block;
+    color: rgb(12, 6, 6);
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
 .collapsible {
-    background-color: rgba(143, 82, 255, 0.973);
-    color: white;
-    margin-left: 200px;
-    margin-top: 20px;
+    background-color: #FBC519;
+    color: #000;
+
+    margin-top: 66px;
+    margin-left: 550px;
     cursor: pointer;
     padding: 18px;
     width: 350px;
@@ -21,33 +31,33 @@
     border: 3px solid white;
     border-bottom: none;
 }
- 
-.content{
-    max-height: 10;
-    margin-left: 200px;
-    overflow: hidden; 
+
+.content {
+    max-height: 0;
+    overflow: hidden;
     transition: max-height 0.2s ease-out;
-    /* background-color:#131313; */
+    background-color:rgb(19, 11, 11);
 }
 
-.full-chat-block{
+.full-chat-block {
     width: 350px;
-    background: white;
+    background: rgb(243, 237, 237);
     text-align: center;
+    margin-left: 550px;
     overflow: auto;
-    scrollbar-width:none;
+    scrollbar-width: none;
     height: max-content;
+   border-radius: 3px;
     transition: max-height 0.2s ease-out;
 }
 
-.outer-container{
-  
+.outer-container {
     min-height: 500px;
     bottom: 0%;
     position: relative;
 }
 
-.chat-container{
+.chat-container {
     max-height: 500px;
     width: 100%;
     position: absolute;
@@ -56,120 +66,122 @@
     scroll-behavior: smooth;
     hyphens: auto;
 }
-.chat-container::-webkit-scrollbar{
+
+.chat-container::-webkit-scrollbar {
     display: none;
 }
 
-.chat-bar-input-block{
+.chat-bar-input-block {
     display: flex;
     float: left;
     box-sizing: border-box;
     justify-content: space-between;
     width: 100%;
     align-items: center;
-    background-color: rgb(243, 191, 46);
+    background-color: #fbc6197e;
     border-radius: 10px 10px 0px 0px;
     padding: 10px 0px 10px 10px;
 }
 
-.chat-bar-icons{
+.chat-bar-icons {
     display: flex;
     justify-content: space-evenly;
     box-sizing: border-box;
-    width: 25%;
+    width: 30%;
     float: right;
     font-size: 20px;
 }
 
-#chat-icon:hover{
-    opacity: 0.7;
+#chat-icon:hover {
+    opacity: .7;
 }
 
+/* Chat bubbles */
+
 #userInput {
-    width: 75%; 
+    width: 75%;
 }
 
 .input-box {
-float: left;
-border: none;
-box-sizing: border-box;
-width: 100%;
-border-radius: 10px;
-padding: 10px;
-font-size: 16px;
-color: #000;
-background-color: white;
-outline: none;
+    float: left;
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    color: #000;
+    background-color: white;
+    outline: none
 }
 
-.userText{
+.userText {
     color: white;
-    font-family: 16px;
+    font-family: Helvetica;
     font-size: 16px;
     font-weight: normal;
     text-align: right;
     clear: both;
 }
 
-.userText span{
+.userText span {
     line-height: 1.5em;
     display: inline-block;
     background: #5ca6fa;
     padding: 10px;
     border-radius: 8px;
     border-bottom-right-radius: 2px;
-    max-width: 10px;
+    max-width: 80%;
     margin-right: 10px;
-    animation: floatup 0.5s forwards;
+    animation: floatup .5s forwards
 }
-  
-.botText{
-  color: #000;
-  font-family: Helvetica;
-  font-weight: normal;
-  font-size: 16px;
-  text-align: left;
+
+.botText {
+    color: #000;
+    font-family: Helvetica;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: left;
 }
-  
-.botText span{
+
+.botText span {
     line-height: 1.5em;
     display: inline-block;
-    background: #e0e0e0e0;
+    background: #e0e0e0;
     padding: 10px;
-    border-radius: 8px;
     border-radius: 8px;
     border-bottom-left-radius: 2px;
     max-width: 80%;
     margin-left: 10px;
-    animation: float 0.5s forwards;
+    animation: floatup .5s forwards
 }
 
-@keyframes floatup{
-    from{
+@keyframes floatup {
+    from {
         transform: translateY(14px);
         opacity: .0;
     }
-    to{
+    to {
         transform: translateY(0px);
         opacity: 1;
     }
 }
 
 @media screen and (max-width:600px) {
-    .full-chat-block{
+    .full-chat-block {
         width: 100%;
         border-radius: 0px;
     }
-    .chat-bar-collapsible{
+    .chat-bar-collapsible {
         position: fixed;
         bottom: 0;
         right: 0;
         width: 100%;
     }
-    .collapsible{
+    .collapsible {
         width: 100%;
         border: 0px;
-        border-top: 3px solid white;
+        border-top: 3px solid rgb(255, 255, 255);
         border-radius: 0px;
     }
 }
